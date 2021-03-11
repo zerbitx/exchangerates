@@ -66,7 +66,7 @@ func New(pc *config.PulsarProducer) (*exchangeRateProducer, error) {
 }
 
 func getCurrencies() (map[string]Currency, error) {
-	req, err := http.NewRequest(http.MethodGet, "https://api.coinbase.com/v2/exchangerates", nil)
+	req, err := http.NewRequest(http.MethodGet, "https://api.coinbase.com/v2/currencies", nil)
 
 	if err != nil {
 		return nil, fmt.Errorf("failed to create exchange rate request: %w", err)
